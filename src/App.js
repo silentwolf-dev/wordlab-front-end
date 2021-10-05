@@ -4,14 +4,14 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-
-import NAVBAR from './components/navbar/navbar'
 import Home from './pages/home'
+import Navbar from './components/navbar/navbar'
+
 
 function App() {
   return (
      <Router>
-       <NAVBAR/>
+       <Navbar/>
         <Switch>
           <Route path="/" component={Home}/>
           </Switch>   

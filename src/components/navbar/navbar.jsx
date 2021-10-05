@@ -1,28 +1,26 @@
-import {
-     Navbar,
-     Nav,
-} from "react-bootstrap";
+import './navbar.css'
+import { Link } from 'react-router-dom';
 
-import { Link } from "react-router-dom";
-
-
-const NAVBAR = ()=>{
-     return(
-        <Navbar bg="dark" variant='dark' collapseOnSelect expand="lg">
-            <Navbar.Brand>
-               Wordlab
-            </Navbar.Brand>
-            <Navbar.Toggle/>
-            <Navbar.Collapse>
-               <Nav>
-                  <Nav.Link as={Link} to="/">
-                      home
-                  </Nav.Link>
-               </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-     );
+function Navbar(){
+    return(
+    <nav>
+       <ul className='nav-list'>
+           <li className='logo'><h1>wordlab</h1></li>
+           <li className='nav-link'>
+               <Link className="link" to="/">home</Link>
+            </li>
+           <li className='nav-link'>
+               <Link className="link" to="/">aboutus</Link>
+           </li>
+           <li className="nav-link">
+              <Link className="link" to="/contact-us">contactus</Link>
+            </li>
+           <li className='nav-link'>
+              <Link className="signup" to="/signup" >signup</Link>
+           </li>
+       </ul>
+   </nav>
+    )
 }
 
-
-export default NAVBAR;
+export default Navbar;
