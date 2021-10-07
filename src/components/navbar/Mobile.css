@@ -6,7 +6,8 @@
       width: 100%;
       position: fixed;
       top: 0;
-      height: max-content;
+      padding: 12px;
+      height: fit-content;
       list-style: none;
       box-shadow: 0px 0px 8px black;
       align-items: center;
@@ -20,7 +21,7 @@
   }
   .burger {
       position: absolute;
-      top: 0;
+      top: 7px;
       display: block;
       margin: 4px;
       right: 0;
@@ -47,6 +48,6 @@
   }
   
   .Pages {
-      margin-top: 200px;
+      margin-top: 52px;
   }
 }

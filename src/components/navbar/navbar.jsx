@@ -1,20 +1,31 @@
 import './navbar.css'
 import './Mobile.css'
 import { Link } from 'react-router-dom';
+import {useState} from 'react'
 import Hamburger from '../Hamburger';
 
 
+
+
 function Navbar(){
-    return(
-       <ul className='nav-list'>
+   const [isToggle, setToggle] = useState(true)
+
+   const handleToggle = (e)=>{
+      setToggle(!isToggle)
+      
+   }  
+
+   return(
+       <ul className='nav-list' >
            <li className='logo'>wordLab</li>
            <li className="burger">
-               <Hamburger/>
+               <Hamburger handleToggle={handleToggle}/>
            </li>
+          { isToggle && <>
            <li className="nav-items">
                <Link className="link" to="/">home</Link>
             </li>
-            <li className="nav-items">
+           <li className="nav-items">
                <Link className="link" to="/contact">contact</Link>
             </li>
             <li className="nav-items">
@@ -23,6 +34,7 @@ function Navbar(){
             <li className="nav-items">
                <Link className="signup" to="/signup">signup</Link>
             </li>
+         </>}
        </ul>
     
    
