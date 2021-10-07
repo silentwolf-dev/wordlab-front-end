@@ -1,25 +1,31 @@
 import './navbar.css'
+import './Mobile.css'
 import { Link } from 'react-router-dom';
+import Hamburger from '../Hamburger';
+
 
 function Navbar(){
     return(
-    <nav>
        <ul className='nav-list'>
-           <li className='logo'><h1>wordlab</h1></li>
-           <li className='nav-link'>
+           <li className='logo'>wordLab</li>
+           <li className="burger">
+               <Hamburger/>
+           </li>
+           <li className="nav-items">
                <Link className="link" to="/">home</Link>
             </li>
-           <li className='nav-link'>
-               <Link className="link" to="/">aboutus</Link>
-           </li>
-           <li className="nav-link">
-              <Link className="link" to="/contact-us">contactus</Link>
+            <li className="nav-items">
+               <Link className="link" to="/contact">contact</Link>
             </li>
-           <li className='nav-link'>
-              <Link className="signup" to="/signup" >signup</Link>
-           </li>
+            <li className="nav-items">
+               <Link className="link" to="/aboutus">aboutus</Link>
+            </li>
+            <li className="nav-items">
+               <Link className="signup" to="/signup">signup</Link>
+            </li>
        </ul>
-   </nav>
+    
+   
     )
 }
 
