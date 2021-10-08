@@ -1,19 +1,32 @@
+
 const LoginForm = ()=>{
     return(
         <div className="Login-form-container">
             <form className="Login-form">
-                <div className="form-group">
+                <div className="login-form-group">
                       <label htmlFor="">Email:</label>
-                      <input type="email" placeholder="Email" required/>
+                      <input 
+                      className="form-control"
+                      type="email" 
+                      placeholder="Email" 
+                      required/>
                 </div>
 
-                <div className="form-group">
+                <div className="login-form-group">
                       <label htmlFor="">Password:</label>
-                      <input type="password" placeholder="Password" required/>
+                      <input 
+                      className="form-control"
+                      type="password" 
+                      placeholder="Password" 
+                      required/>
                 </div>
+                <button 
+                type="submit" 
+                className="login-btn"
+                >
+                Login in
+                </button>
             </form>
-
-            <button type="submit">Login in</button>
         </div>
     )
 }
