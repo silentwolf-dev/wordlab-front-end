@@ -37,6 +37,9 @@
     margin: 8px;
 }
 
+.link {
+    padding: 10px;
+}
 
 .link:hover{
   border-bottom: 3px solid  black;
@@ -46,9 +49,20 @@
     text-decoration: none;
     transition: ease-in-out;
     color: black;
+    padding: 10px;
     font-size: 20px;
 }
 
+.login{
+    text-decoration: none;
+    transition: ease-in-out;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+}
+.login:hover {
+    border-bottom: 3px solid blue;
+}
 .signup:hover{
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid blue;
 }

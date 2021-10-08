@@ -1,44 +1,20 @@
-import './navbar.css'
-import './Mobile.css'
-import { Link } from 'react-router-dom';
-import {useState} from 'react'
-import Hamburger from '../Hamburger';
-
-
+import './Navbar.css';
+import MobileNavbar from './MobileNav'
+import DesktopNav from './desktopNav'
+import { useState } from 'react'
 
 
 function Navbar(){
-   const [isToggle, setToggle] = useState(true)
+  const [isMobile, setMobile] = useState(window.innerWidth)
 
-   const handleToggle = (e)=>{
-      setToggle(!isToggle)
-      
-   }  
-
-   return(
-       <ul className='nav-list' >
-           <li className='logo'>wordLab</li>
-           <li className="burger">
-               <Hamburger handleToggle={handleToggle}/>
-           </li>
-          { isToggle && <>
-           <li className="nav-items">
-               <Link className="link" to="/">home</Link>
-            </li>
-           <li className="nav-items">
-               <Link className="link" to="/contact">contact</Link>
-            </li>
-            <li className="nav-items">
-               <Link className="link" to="/aboutus">aboutus</Link>
-            </li>
-            <li className="nav-items">
-               <Link className="signup" to="/signup">signup</Link>
-            </li>
-         </>}
-       </ul>
-    
-   
-    )
+   window.addEventListener("resize", function(){
+      setMobile(window.innerWidth)
+   })
+   if(isMobile <= 500){
+      return(<MobileNavbar/>)
+   }else{
+      return(<DesktopNav/>)
+   }
 }
 
 export default Navbar;

@@ -11,3 +11,10 @@
 .Pages {
     margin-top: 71px;
 }
+
+
+@media (max-width: 500px){
+    .Pages {
+        margin-top: 55px;
+    }
+}
