@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto';
     box-sizing: border-box;
 }
+
 
 .root {
     position: relative;
@@ -17,4 +22,30 @@
     .Pages {
         margin-top: 55px;
     }
+}
+
+
+.error-display {
+  background-color:red;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  color: white
+}
+
+
+.btn-primary {
+    padding: 14px 10px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    border: none;
+    outline: none;
 }
