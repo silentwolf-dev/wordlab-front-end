@@ -21,6 +21,10 @@
 @media (max-width: 500px){
     .Pages {
         margin-top: 55px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: flex;
     }
 }
 

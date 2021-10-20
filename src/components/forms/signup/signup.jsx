@@ -1,5 +1,5 @@
 import {Component} from 'react'
-
+import FormContainer from '../FormContainer';
 
 class Signup extends Component {
 
@@ -19,14 +19,14 @@ class Signup extends Component {
 
     prevStep(){
         const {step}= this.state;
-        
+
         this.setState({step: step + 1})
     }
     
     render(){
-        return(
-          null
-        )
+       // const {step} = this.state;
+
+        return null
     }
 }
 
