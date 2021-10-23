@@ -1,32 +1,77 @@
 import {Component} from 'react'
-import FormContainer from '../FormContainer';
+import UserDetails from './userDetails';
+import Contactinfo from './Contactinfo';
+
 
 class Signup extends Component {
+   constructor(){
+       super()
+       this.nextStep = this.nextStep.bind(this)
+       this.prevStep = this.prevStep.bind(this)
+    }
+   
 
     state = {
         step: 1,
         firstname: '',
         lastname: '',
-        username: '',
-        Email: '',
+        email: '',
         password: '',
     }
 
+    
+
     nextStep(){
-        const {step} = this.state;
-        this.setState({step: step + 1})
+      const { step } =  this.state
+      if(step === 2) {
+        return
+      }else if(step > 2) {
+        this.setState({step: 0})
+      }
+      this.setState({step: step + 1})
+    
+    
+      console.log(step)
     }
 
     prevStep(){
-        const {step}= this.state;
+      const {step}= this.state;
 
-        this.setState({step: step + 1})
+      if(step <= 1) {
+        return
+      }
+
+      this.setState({step: step - 1})
     }
     
-    render(){
-       // const {step} = this.state;
+    handleChange(input, e){
+      this.setState({[input]: e.target.value})
+    }
 
-        return null
+    render(){
+        const {step} = this.state;
+       
+        switch(step){
+           case 1:
+               return(
+               <UserDetails
+                  nextStep={this.nextStep}
+               />)
+
+            case 2:
+                return(
+                    <Contactinfo
+                      prevStep={this.prevStep}
+                    />
+                )
+
+           default: 
+            return(
+            <UserDetails
+               nextStep={this.nextStep}
+            />)
+              
+        }
     }
 }
 

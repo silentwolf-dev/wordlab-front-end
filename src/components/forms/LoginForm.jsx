@@ -1,32 +1,37 @@
+import {
+   SimpleForm,
+   FromGroup,
+   Input,
+   Formheader,
+   FromError,
+   FromLabel,
+} from '../ui/SimpleForm';
+
+import {ButtonPrimary} from "../Buttons"
 
 const LoginForm = ()=>{
     return(
-        <div className="Login-form-container">
-            <form className="Login-form">
-                <div className="login-form-group">
-                      <label htmlFor="">Email:</label>
-                      <input 
-                      className="form-control"
-                      type="email" 
-                      placeholder="Email" 
-                      required/>
-                </div>
+        <div className="login-form-container">
+           <SimpleForm>
+              <Formheader title="Login"/>
+              <FromGroup>
+                <FromLabel>email:</FromLabel>
+                  <Input
+                    placeholder="Email"
+                  />
+                  <FromError>test</FromError>
+              </FromGroup>
+              <FromGroup>
+                <FromLabel>password:</FromLabel>
+                  <Input
+                    type="password"
+                    placeholder="password"
+                  />
+                  <FromError>test</FromError>
+              </FromGroup>
 
-                <div className="login-form-group">
-                      <label htmlFor="">Password:</label>
-                      <input 
-                      className="form-control"
-                      type="password" 
-                      placeholder="Password" 
-                      required/>
-                </div>
-                <button 
-                type="submit" 
-                className="login-btn"
-                >
-                Login in
-                </button>
-            </form>
+              <ButtonPrimary type="submit" id="login-submit" />
+           </SimpleForm>
         </div>
     )
 }

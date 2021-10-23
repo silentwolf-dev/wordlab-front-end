@@ -1,36 +1,38 @@
 import React from 'react'
+import {
+   SimpleForm, 
+   FromLabel,
+   Formheader,
+   FromGroup,
+   Input,
+} from '../../ui/SimpleForm';
 
-const userDetails = () => {
+
+import {ButtonPrimary} from '../../Buttons'
+const UserDetails = ({ nextStep,}) => {
     return (
-        <form>
-           <div className="form-group">
-            <label htmlFor="">First name</label>
-              <input 
-              type="text" 
-              className="form-input"
-              placeholder="first name"
-              />
-           </div>
+        <div className="signup-form-container">
+           <SimpleForm id="signup_form">
+               <FromGroup>
+                  <FromLabel>First name</FromLabel>
+                  <Input 
+                   type="text" 
+                    placeholder="enter your first name"
+                   />
+               </FromGroup>
 
-           <div className="form-group">
-            <label htmlFor="">Lastname</label>
-              <input 
-              type="text" 
-              className="form-input"
-              placeholder="last name"
-              />
-           </div>
+               <FromGroup>
+                  <FromLabel>last name</FromLabel>
+                  <Input 
+                    type="text" 
+                    placeholder="enter your last name"
+                   />
+               </FromGroup>
 
-           <div className="form-group">
-            <label htmlFor="">username</label>
-              <input 
-              type="text" 
-              className="form-input"
-              placeholder="username"
-              />
-           </div>
-        </form>
+               <ButtonPrimary id="next-btn" content="next" handleClick={nextStep}/>
+           </SimpleForm>
+        </div>
     )
 }
 
-export default userDetails
+export default UserDetails

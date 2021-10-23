@@ -29,19 +29,15 @@
 }
 
 
-.error-display {
-  background-color:red;
-  position: relative;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 2px;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-  color: white
+.login-form-container{
+    position: relative;
+    display: block;
+    top: 92px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
+
 
 
 .btn-primary {
@@ -49,7 +45,33 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: white;
     background-color: blue;
-    text-align: center;
     border: none;
     outline: none;
+}
+
+#login-submit {
+    position: relative;
+    left: 306px;
+}
+
+.signup-form-container {
+    position: relative;
+    display: block;
+    top: 92px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+#next-btn {
+    position: absolute;
+    right: 8px;
+}
+#back-btn {
+    position: absolute;
+    left: 8px;
+}
+
+#signup_form {
+    height: 312px;
 }
